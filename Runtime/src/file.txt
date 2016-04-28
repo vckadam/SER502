@@ -1,0 +1,65 @@
+func checkGreaterstart a b
+load a
+load b
+less
+iftrue
+load a
+print a
+iffalse
+load b
+print b
+endif
+funcend
+.mainstart
+store a 5
+store b 10
+store c 7
+load c
+load b
+mul
+load a
+add
+print d
+store f true
+store g true
+load f
+load g
+EQ2
+iftrue
+printstr both are true 
+iffalse
+printstr either one of them is false
+endif
+funccall checkGreater 25 27
+store y true
+store z false
+load y
+load z
+EQ2
+iftrue
+printstr both are true 
+iffalse
+printstr either one of them is false
+endif
+store p 1
+store len 10
+loopstart
+load p
+load len
+gratereq
+iftrue
+load p
+print p
+iffalse
+break
+endif
+inc p
+loopend
+stack s
+push s 5
+push s 6
+push s 7
+store u stackpop s
+load u
+print u
+.mainend
